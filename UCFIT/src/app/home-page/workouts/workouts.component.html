@@ -1,0 +1,118 @@
+<div class="center">
+<h1>Hello {{WorkoutUserName}}! Keep up the good work!</h1>
+
+<br>
+
+<button class="button" (click)="showAddForm()">Log Workout</button>
+<button class="button" (click)="showHistory()">View History</button>
+
+<hr>
+
+<div *ngIf="contentDisplayId == 0">
+   
+</div>
+
+<div *ngIf="contentDisplayId == 1">
+    <form class="whole-form">
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Select Workout</label>
+            <select class="form-control col-3" id="inputWorkout">
+                <option class="button">Bench Press</option>
+                <option class="button">Squat</option>
+                <option class="button">Deadlift</option>
+                <option class="button">Bicep Curl</option>
+                <option class="button">Leg Press</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="inputSets">Enter Sets</label>
+            <input type="number" class="form-control" id="inputSets" placeholder="...">
+        </div>
+        <div class="form-group">
+            <label for="inputReps">Enter Reps</label>
+            <input type="number" class="form-control" id="inputReps" placeholder="...">
+        </div>
+        <div class="form-group">
+            <label for="inputWeight">Enter Weight</label>
+            <input type="number" class="form-control" id="inputWeight" placeholder="...">
+        </div>
+        <button class="btn btn-primary" (click)="getResults()">Submit</button>
+    </form>
+    
+</div>
+
+<div *ngIf="contentDisplayId == 2">
+    <!--<div class="btn-group" role="group" aria-label="...">
+        <button  class="buttonrow" (click)="tableRefresh(1)">BENCH PRESS</button>
+        <br>
+        <button  class="buttonrow" (click)="tableRefresh(2)">SQUAT</button>
+        <br>
+        <button  class="buttonrow" (click)="tableRefresh(3)">DEADLIFT</button>
+    </div>-->
+    <div class="scrolling-wrapper">
+        <div class="card"><button  class="buttonrow" (click)="tableRefresh(1)">Bench Press</button></div>
+        <div class="card"><button  class="buttonrow" (click)="tableRefresh(2)">Squat</button></div>
+        <div class="card"><button  class="buttonrow" (click)="tableRefresh(3)">Deadlift</button></div>
+        <div class="card"><button  class="buttonrow" (click)="tableRefresh(4)">Bicep Curl</button></div>
+        <div class="card"><button  class="buttonrow" (click)="tableRefresh(5)">Leg Press</button></div>
+
+    </div>
+    <hr>
+
+    <div *ngIf="diningHallId > 0">
+        <h4>{{fillerStatement}}</h4>
+    
+        <h1>{{workoutName}}</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Weight</th>
+                    <th scope="col">Sets</th>
+                    <th scope="col">Reps</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>{{sectionOne_rowOne_Date}}</td>
+                    <td>{{sectionOne_rowOne_Weight}}</td>
+                    <td>{{sectionOne_rowOne_Set}}</td>
+                    <td>{{sectionOne_rowOne_Reps}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>{{sectionOne_rowTwo_Date}}</td>
+                    <td>{{sectionOne_rowTwo_Weight}}</td>
+                    <td>{{sectionOne_rowTwo_Set}}</td>
+                    <td>{{sectionOne_rowTwo_Reps}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>{{sectionOne_rowThree_Date}}</td>
+                    <td>{{sectionOne_rowThree_Weight}}</td>
+                    <td>{{sectionOne_rowThree_Set}}</td>
+                    <td>{{sectionOne_rowThree_Reps}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div style="display: block">
+        <canvas mdbChart
+            [chartType]="chartType"
+            [datasets]="chartDatasets"
+            [labels]="chartLabels"
+            [colors]="chartColors"
+            [options]="chartOptions"
+            [legend]="true"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)">
+        </canvas>
+      </div>
+</div>
+
+<hr>
+<button class="goHomeButton" routerLink="/home">GO HOME</button>
+</div>

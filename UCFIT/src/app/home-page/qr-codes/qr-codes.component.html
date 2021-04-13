@@ -1,0 +1,75 @@
+<head>
+  <script src="/src/app/home-page/qr-codes/qr_packed.js"></script>
+  <script src="https://raw.githubusercontent.com/mebjas/html5-qrcode/master/minified/html5-qrcode.min.js">
+
+    const html5QrCode = new Html5Qrcode(/* element id */ "reader");
+
+    // File based scanning
+    const fileinput = document.getElementById('qr-input-file');
+    fileinput.addEventListener('change', e => {
+      if (e.target.files.length == 0) {
+        // No file selected, ignore 
+        return;
+      }
+
+      // Use the first item in the list
+      const imageFile = e.target.files[0];
+      html5QrCode.scanFile(imageFile, /* showImage= */true)
+        .then(qrCodeMessage => {
+          // success, use qrCodeMessage
+          console.log(qrCodeMessage);
+        })
+        .catch(err => {
+          // failure, handle it.
+          console.log(`Error scanning file. Reason: ${err}`)
+        });
+    });
+  </script>
+</head>
+
+
+<!-- <h4 class="center">CLICK TO OPEN CAMERA</h4>
+<div class="center">
+  <button class="button"><input type="file" accept="image/*" capture="environment"></button>
+
+  <br>
+  <button class="button" routerLink="/home">GO HOME</button>
+</div> -->
+
+
+<div id="container">
+  <h1>Guided Workouts</h1>
+
+  <div class="scrolling-wrapper">
+    <div class="card"><button class="buttonrow" (click)="tableRefresh(1)">Bench Press</button></div>
+    <div class="card"><button class="buttonrow" (click)="tableRefresh(2)">Squat</button></div>
+    <div class="card"><button class="buttonrow" (click)="tableRefresh(3)">Deadlift</button></div>
+    <div class="card"><button class="buttonrow" (click)="tableRefresh(4)">Bicep Curl</button></div>
+    <div class="card"><button class="buttonrow" (click)="tableRefresh(5)">Leg Press</button></div>
+  </div>
+
+  <script src="./src/qrCodeScanner.js"></script>
+</div>
+
+<hr>
+
+<div class="center">
+  <div *ngIf="gifID == 1">
+    <img src="assets/bench1.gif" alt="Bench Press" width="500" height="600">
+  </div>
+  <div *ngIf="gifID == 2">
+    <img src="assets/squatgif.gif" alt="Squat" width="500" height="600">
+  </div>
+  <div *ngIf="gifID == 3">
+    <img src="assets/deadlift.gif" alt="Deadlift" width="500" height="600">
+  </div>
+  <div *ngIf="gifID == 4">
+    <img src="assets/curl.gif" alt="Bicep Curl" width="500" height="600">
+  </div>
+  <div *ngIf="gifID == 5">
+    <img src="otg_quesadilla.jpg" alt="Leg Press" width="500" height="600">
+  </div>
+</div>
+
+
+<script src="/src/app/home-page/qr-codes/qrCodeScanner.js"></script>

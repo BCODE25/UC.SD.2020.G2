@@ -1,0 +1,149 @@
+img{
+  height: 300px;
+  width: 300px;
+}#container {
+  text-align: center;
+  margin: 0;
+}
+
+#qr-canvas {
+  margin: auto;
+  width: calc(100% - 20px);
+  max-width: 400px;
+}
+
+
+#btn-scan-qr {
+  cursor: pointer;
+}
+
+.button{
+  background: linear-gradient(to right top, #cd356b, #bd3f32);
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid;
+  padding: 4px 25px;
+  color: white;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  border-radius: 25px;
+  width: 15%;
+}
+
+img{
+  height: 300px;
+  width: 300px;
+  border-radius: 25px;
+
+}
+
+#container {
+  text-align: center;
+  margin: 0;
+}
+
+#qr-canvas {
+  margin: auto;
+  width: calc(100% - 20px);
+  max-width: 400px;
+}
+
+#btn-scan-qr {
+  cursor: pointer;
+}
+
+#btn-scan-qr img {
+  height: 10em;
+  padding: 15px;
+  margin: 15px;
+  background: white;
+}
+
+#qr-result {
+  font-size: 1.2em;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 700px;
+  background-color: white;
+}
+
+#btn-scan-qr img {
+  height: 10em;
+  padding: 15px;
+  margin: 15px;
+  background: white;
+}
+
+#qr-result {
+  font-size: 1.2em;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 700px;
+  background-color: white;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.wrapper {
+  display: hidden;
+}
+
+.center{
+  text-align: center;
+  padding: 0px 5px;
+}
+
+
+@media only screen and (max-width: 600px) {
+h1 {
+  font-size: medium;
+  font-weight: 900;
+}
+
+    .center{
+        text-align: center;
+        padding: 0px 20px;
+        overflow: hidden;
+    }
+    
+    .scrolling-wrapper {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+  }
+  .card {
+      display: inline;
+      background: none;
+      border: none;
+  }
+    
+#container {
+    text-align: center;
+}
+.buttonrow{
+  background: linear-gradient(to right top, #cd356b, #bd3f32);
+  border: 1px solid;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 25px;
+  margin: 20px 0px 20px 0px;
+}
+}

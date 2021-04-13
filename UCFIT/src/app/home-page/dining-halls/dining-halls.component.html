@@ -1,0 +1,279 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
+    <style>
+
+    </style>
+</head>
+
+
+<div class=center>
+    <p id="pageLabel">{{pageLabel}}</p>
+
+    
+    <!--
+    <div class="center" role="group" aria-label="...">
+        <button type="button" class="button" (click)="tableRefresh(1)">CENTER COURT</button>
+
+        <button type="button" class="button" (click)="tableRefresh(2)">MARKET POINTE</button>
+
+        <button type="button" class="button" (click)="tableRefresh(3)">ON THE GREEN</button>
+    </div>-->
+
+    <div class="scrolling-wrapper">
+        <div class="card"><button  class="buttonrow" (click)="tableRefresh(1)">Center Court</button></div>
+        <div class="card"><button  class="buttonrow" (click)="tableRefresh(2)">Market Pointe</button></div>
+        <div class="card"><button  class="buttonrow" (click)="tableRefresh(3)">On The Green</button></div>
+    </div>
+    <hr>
+
+    <body>
+    
+    <!-- 
+        CENTER COURT PAGE
+     -->
+        <div *ngIf="diningHallId == 1">
+            <div class="cc_bratwurst">
+                <div class="caption">
+                    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">
+                        SAVORY BRATWURST</span>
+                </div>
+            </div>
+
+            <div style="position:relative;">
+                <div class="description">
+                    <p><b>cal</b> 180 | a crisp juicy glizzy | vegetarian</p>
+                </div>
+            </div>
+
+            <div class="cc_hamburger">
+                <div class="caption">
+                    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">
+                        THICC HAMBURGER</span>
+                </div>
+            </div>
+
+            <div style="position:relative;">
+                <div class="description">
+                    <p><b>cal</b> 260 | usda prime seared to perfection</p>
+                </div>
+            </div>
+
+            <div class="cc_hasselbackpotato">
+                <div class="caption">
+                    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">
+                        HASSELBACK POTATO</span>
+                </div>
+            </div>
+
+            <div style="position:relative;">
+                <div class="description">
+                    <p><b>cal</b> 300 | thin cripsy flaky buttery | vegetarian</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 
+            MARKET POINTE PAGE
+         -->
+        <div *ngIf="diningHallId == 2">
+            <div class="mp_belgianwaffle">
+                <div class="caption">
+                    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">
+                        BELGIAN WAFFLE</span>
+                </div>
+            </div>
+
+            <div style="position:relative;">
+                <div class="description">
+                    <p><b>cal</b> 150 | soft and fluffy while not too sweet</p>
+                </div>
+            </div>
+
+            <div class="mp_cheesecake">
+                <div class="caption">
+                    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">
+                        STRAWBERRY CHEESECAKE</span>
+                </div>
+            </div>
+
+            <div style="position:relative;">
+                <div class="description">
+                    <p><b>cal</b> 220 | rich and dense with a bold flavor</p>
+                </div>
+            </div>
+
+            <div class="mp_chocolatechipcookie">
+                <div class="caption">
+                    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">
+                        WARM CHOCOLATECHIP COOKIE</span>
+                </div>
+            </div>
+
+            <div style="position:relative;">
+                <div class="description">
+                    <p><b>cal</b> 100 | ooey gooey and melty to perfection</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 
+            ON THE GREEN PAGE
+         -->
+        <div *ngIf="diningHallId == 3">
+            <div class="otg_quesadilla">
+                <div class="caption">
+                    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">
+                        CHEESY QUESADILLA</span>
+                </div>
+            </div>
+
+            <div style="position:relative;">
+                <div class="description">
+                    <p><b>cal</b> 215 | flavorful and crunchy with a hint of spice | vegitarian</p>
+                </div>
+            </div>
+
+            <div class="otg_shawarma">
+                <div class="caption">
+                    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">
+                        SPICY SHAWARMA</span>
+                </div>
+            </div>
+
+            <div style="position:relative;">
+                <div class="description">
+                    <p><b>cal</b> 110 | zesty and tangy but not too hot</p>
+                </div>
+            </div>
+
+            <div class="otg_turkeysandwich">
+                <div class="caption">
+                    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">
+                        ROASTED TURKEY SANDWICH</span>
+                </div>
+            </div>
+
+            <div style="position:relative;">
+                <div class="description">
+                    <p><b>cal</b> 90 | bold yet classic</p>
+                </div>
+            </div>
+        </div>
+    </body>
+    <!-- <div *ngIf="diningHallId > 0">
+            <h4>{{fillerStatement}}</h4>
+        
+            <h1>{{sectionOneName}}</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Calories</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Attributes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>{{sectionOne_rowOne_Name}}</td>
+                        <td>{{sectionOne_rowOne_Calories}}</td>
+                        <td>{{sectionOne_rowOne_Description}}</td>
+                        <td>{{sectionOne_rowOne_Attributes}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>{{sectionOne_rowTwo_Name}}</td>
+                        <td>{{sectionOne_rowTwo_Calories}}</td>
+                        <td>{{sectionOne_rowTwo_Description}}</td>
+                        <td>{{sectionOne_rowTwo_Attributes}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>{{sectionOne_rowThree_Name}}</td>
+                        <td>{{sectionOne_rowThree_Calories}}</td>
+                        <td>{{sectionOne_rowThree_Description}}</td>
+                        <td>{{sectionOne_rowThree_Attributes}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h1>{{sectionTwoName}}</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Calories</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Attributes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>{{sectionTwo_rowOne_Name}}</td>
+                        <td>{{sectionTwo_rowOne_Calories}}</td>
+                        <td>{{sectionTwo_rowOne_Description}}</td>
+                        <td>{{sectionTwo_rowOne_Attributes}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>{{sectionTwo_rowTwo_Name}}</td>
+                        <td>{{sectionTwo_rowTwo_Calories}}</td>
+                        <td>{{sectionTwo_rowTwo_Description}}</td>
+                        <td>{{sectionTwo_rowTwo_Attributes}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>{{sectionTwo_rowThree_Name}}</td>
+                        <td>{{sectionTwo_rowThree_Calories}}</td>
+                        <td>{{sectionTwo_rowThree_Description}}</td>
+                        <td>{{sectionTwo_rowThree_Attributes}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h1>{{sectionThreeName}}</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Calories</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Attributes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>{{sectionThree_rowOne_Name}}</td>
+                        <td>{{sectionThree_rowOne_Calories}}</td>
+                        <td>{{sectionThree_rowOne_Description}}</td>
+                        <td>{{sectionThree_rowOne_Attributes}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>{{sectionThree_rowTwo_Name}}</td>
+                        <td>{{sectionThree_rowTwo_Calories}}</td>
+                        <td>{{sectionThree_rowTwo_Description}}</td>
+                        <td>{{sectionThree_rowTwo_Attributes}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>{{sectionThree_rowThree_Name}}</td>
+                        <td>{{sectionThree_rowThree_Calories}}</td>
+                        <td>{{sectionThree_rowThree_Description}}</td>
+                        <td>{{sectionThree_rowThree_Attributes}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> -->
+</div>
+
+
+<hr>
+<div class="center">
+    <button class="goHomeButton" routerLink="/home">GO HOME</button>
+</div>

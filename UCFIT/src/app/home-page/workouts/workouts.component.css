@@ -1,0 +1,146 @@
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+.card {
+    display: inline;
+    background: none;
+    border: none;
+}
+ 
+
+.button{
+    background: linear-gradient(to right top, #cd356b, #bd3f32);
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid;
+  padding: 4px 25px;
+  color: white;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  border-radius: 25px;
+  width: 15%;
+}
+
+.buttonrow{
+    background: linear-gradient(to right top, #cd356b, #bd3f32);
+    border: 1px solid;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 25px;
+    margin: 20px 0px 20px 0px;
+}
+
+.goHomeButton{
+        
+    background: linear-gradient(to right top, #cd356b, #bd3f32);
+      text-align: center;
+      text-decoration: none;
+      border: 1px solid;
+      padding: 4px 5px;
+      color: white;
+      display: inline-block;
+      font-size: 16px;
+      margin: 10px;
+      border-radius: 25px;
+      width: 30%;
+    }
+
+.whole-form{
+    padding: 0px 20px;
+}
+
+.center{
+    text-align: center;
+
+}
+
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+.card {
+    display: inline-block;
+}
+
+.scrolling-wrapper {
+    -webkit-overflow-scrolling: touch;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    h1{
+        font-size: medium;
+        font-weight: 900;
+    }
+    h4{
+        font-size: small;
+        font-weight: 800;
+    }
+
+
+    .buttonrow{
+        background: linear-gradient(to right top, #cd356b, #bd3f32);
+        border: 1px solid;
+        color: white;
+        padding: 10px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 25px;
+        margin: 20px 0px 20px 0px;
+    }
+    .button{
+        background: linear-gradient(to right top, #cd356b, #bd3f32);
+      text-align: center;
+      text-decoration: none;
+      border: 1px solid;
+      padding: 4px 25px;
+      color: white;
+      display: inline-block;
+      font-size: 16px;
+      margin: 10px;
+      border-radius: 25px;
+      width: 30%;
+    }
+    .goHomeButton{
+        
+        background: linear-gradient(to right top, #cd356b, #bd3f32);
+          text-align: center;
+          text-decoration: none;
+          border: 1px solid;
+          padding: 4px 5px;
+          color: white;
+          display: inline-block;
+          font-size: 16px;
+          margin: 10px;
+          border-radius: 25px;
+          width: 30%;
+        }
+
+    .whole-form{
+        padding: 0px 5px;
+    }
+    
+
+
+    .scrolling-wrapper {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+    .card {
+        display: inline;
+        background: none;
+        border: none;
+    }
+}

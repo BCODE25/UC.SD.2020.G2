@@ -1,0 +1,484 @@
+#pageLabel {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+
+
+.center{
+    text-align: center;
+    padding: 0px 5px;
+}
+
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+.card {
+    display: inline;
+    background: none;
+    border: none;
+}
+
+
+.button{
+    background-color: #E00122; 
+    border: 1px solid;
+    color: white;
+    padding: 4px 25px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid;
+    padding: 4px 25px;
+    color: white;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    border-radius: 25px;
+    width: 50%;    
+}
+.buttonrow{
+    background: linear-gradient(to right top, #cd356b, #bd3f32);
+    border: 1px solid;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 25px;
+    margin: 20px 0px 20px 0px;
+}
+
+.goHomeButton{
+        
+    background: linear-gradient(to right top, #cd356b, #bd3f32);
+      text-align: center;
+      text-decoration: none;
+      border: 1px solid;
+      padding: 4px 5px;
+      color: white;
+      display: inline-block;
+      font-size: 16px;
+      margin: 10px;
+      border-radius: 25px;
+      width: 30%;
+    }
+
+
+@media only screen and (min-width: 601px) {
+
+
+    .button{
+        background: linear-gradient(to right top, #cd356b, #bd3f32);
+        text-align: center;
+        text-decoration: none;
+        border: 1px solid;
+        padding: 4px 25px;
+        color: white;
+        display: inline-block;
+        font-size: 16px;
+        margin: 10px;
+        border-radius: 25px;
+        width: 15%; 
+    }
+
+    .goHomeButton{
+        
+        background: linear-gradient(to right top, #cd356b, #bd3f32);
+          text-align: center;
+          text-decoration: none;
+          border: 1px solid;
+          padding: 4px 5px;
+          color: white;
+          display: inline-block;
+          font-size: 16px;
+          margin: 10px;
+          border-radius: 25px;
+          width: 30%;
+        }
+    
+    .center{
+        text-align: center;
+    
+    }
+
+    .scrolling-wrapper {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+    .card {
+        display: inline;
+        background: none;
+        border: none;
+    }
+
+}
+
+/* MOBILE */
+@media only screen and (max-width: 600px) {
+    body,
+    html {
+        height: 100%;
+        margin: 0;
+        font: 400 15px/1.8 "Lato", sans-serif;
+        color: #777;
+    }
+
+    .cc_bratwurst,
+    .cc_hamburger,
+    .cc_hasselbackpotato,
+    .mp_belgianwaffle,
+    .mp_cheesecake,
+    .mp_chocolatechipcookie,
+    .otg_quesadilla,
+    .otg_shawarma,
+    .otg_turkeysandwich {
+        position: relative;
+        opacity: 0.65;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .cc_bratwurst {
+        background-image: url("../../../assets/cc_bratwurst.jpg");
+        min-height: 400px;
+    }
+
+    .cc_hamburger {
+        background-image: url("../../../assets/cc_hamburger.jpg");
+        min-height: 400px;
+    }
+
+    .cc_hasselbackpotato {
+        background-image: url("../../../assets/cc_hasselbackpotato.jpg");
+        min-height: 400px;
+    }
+
+    .mp_belgianwaffle {
+        background-image: url("../../../assets/mp_belgianwaffle.jpg");
+        min-height: 400px;
+    }
+
+    .mp_cheesecake {
+        background-image: url("../../../assets/mp_cheesecake.jpg");
+        min-height: 400px;
+    }
+
+    .mp_chocolatechipcookie {
+        background-image: url("../../../assets/mp_chocolatechipcookie.jpg");
+        min-height: 400px;
+    }
+
+    .otg_quesadilla {
+        background-image: url("../../../assets/otg_quesadilla.jpg");
+        min-height: 400px;
+    }
+
+    .otg_shawarma {
+        background-image: url("../../../assets/otg_shawarma.jpg");
+        min-height: 400px;
+    }
+
+    .otg_turkeysandwich {
+        background-image: url("../../../assets/otg_turkeysandwich.jpg");
+        min-height: 400px;
+    }
+
+
+    .caption {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        text-align: center;
+        color: #000;
+    }
+
+    .caption span.border {
+        background-color: #111;
+        color: #fff;
+        padding: 18px;
+        font-size: 25px;
+        letter-spacing: 10px;
+    }
+
+    h3 {
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        font: 20px "Lato", sans-serif;
+        color: #111;
+    }
+
+    /* Turn off parallax scrolling for tablets and phones */
+    @media only screen and (max-device-width: 1024px) {
+
+        .cc_bratwurst,
+        .cc_hamburger,
+        .cc_hasselbackpotato,
+        .mp_belgianwaffle,
+        .mp_cheesecake,
+        .mp_chocolatechipcookie,
+        .otg_quesadilla,
+        .otg_shawarma,
+        .otg_turkeysandwich {
+            background-attachment: scroll;
+        }
+    }
+
+    .center{
+        text-align: center;
+        padding: 0px 5px;
+    }
+
+
+    h1{
+        font-size: medium;
+        font-weight: 900;
+        text-align: center;
+    }
+    h4{
+        font-size: small;
+        font-weight: 800;
+        text-align: center;
+    }
+
+    .button{
+        background: linear-gradient(to right top, #cd356b, #bd3f32);
+        text-align: center;
+        text-decoration: none;
+        border: 1px solid;
+        padding: 4px 25px;
+        color: white;
+        display: inline-block;
+        font-size: 16px;
+        margin: 10px;
+        border-radius: 25px;
+        width: 15%; 
+    }
+
+    .goHomeButton{
+        
+        background: linear-gradient(to right top, #cd356b, #bd3f32);
+          text-align: center;
+          text-decoration: none;
+          border: 1px solid;
+          padding: 4px 5px;
+          color: white;
+          display: inline-block;
+          font-size: 16px;
+          margin: 10px;
+          border-radius: 25px;
+          width: 30%;
+        }
+
+    .scrolling-wrapper {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+    .card {
+        display: inline;
+        background: none;
+        border: none;
+    }
+    
+
+    table, thead, tbody, th, td, tr{
+        display: block;
+    
+    }
+
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 601px) {
+    body,
+    html {
+        height: 100%;
+        margin: 0;
+        font: 400 15px/1.8 "Lato", sans-serif;
+        color: #777;
+    }
+
+    .cc_bratwurst,
+    .cc_hamburger,
+    .cc_hasselbackpotato,
+    .mp_belgianwaffle,
+    .mp_cheesecake,
+    .mp_chocolatechipcookie,
+    .otg_quesadilla,
+    .otg_shawarma,
+    .otg_turkeysandwich {
+        position: relative;
+        opacity: 0.65;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .cc_bratwurst {
+        background-image: url("../../../assets/cc_bratwurst.jpg");
+        min-height: 400px;
+    }
+
+    .cc_hamburger {
+        background-image: url("../../../assets/cc_hamburger.jpg");
+        min-height: 400px;
+    }
+
+    .cc_hasselbackpotato {
+        background-image: url("../../../assets/cc_hasselbackpotato.jpg");
+        min-height: 400px;
+    }
+
+    .mp_belgianwaffle {
+        background-image: url("../../../assets/mp_belgianwaffle.jpg");
+        min-height: 400px;
+    }
+
+    .mp_cheesecake {
+        background-image: url("../../../assets/mp_cheesecake.jpg");
+        min-height: 400px;
+    }
+
+    .mp_chocolatechipcookie {
+        background-image: url("../../../assets/mp_chocolatechipcookie.jpg");
+        min-height: 400px;
+    }
+
+    .otg_quesadilla {
+        background-image: url("../../../assets/otg_quesadilla.jpg");
+        min-height: 400px;
+    }
+
+    .otg_shawarma {
+        background-image: url("../../../assets/otg_shawarma.jpg");
+        min-height: 400px;
+    }
+
+    .otg_turkeysandwich {
+        background-image: url("../../../assets/otg_turkeysandwich.jpg");
+        min-height: 400px;
+    }
+
+    .description {
+        color:#ddd;
+        background-color:#282E34;
+        text-align:center;
+        font-size: 20px;
+        padding-top:1%;
+        padding-bottom: .25%;
+        letter-spacing: 10px;
+    }
+
+    .caption {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        text-align: center;
+        color: #000;
+    }
+
+    .caption span.border {
+        background-color: #111;
+        color: #fff;
+        padding: 18px;
+        font-size: 25px;
+        letter-spacing: 10px;
+    }
+
+    h3 {
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        font: 20px "Lato", sans-serif;
+        color: #111;
+    }
+
+    /* Turn off parallax scrolling for tablets and phones */
+    @media only screen and (max-device-width: 1024px) {
+
+        .cc_bratwurst,
+        .cc_hamburger,
+        .cc_hasselbackpotato,
+        .mp_belgianwaffle,
+        .mp_cheesecake,
+        .mp_chocolatechipcookie,
+        .otg_quesadilla,
+        .otg_shawarma,
+        .otg_turkeysandwich {
+            background-attachment: scroll;
+        }
+    }
+
+    .center{
+        text-align: center;
+        padding: 0px 5px;
+    }
+
+
+    h1{
+        font-size: medium;
+        font-weight: 900;
+        text-align: center;
+    }
+    h4{
+        font-size: small;
+        font-weight: 800;
+        text-align: center;
+    }
+
+    .button{
+        background: linear-gradient(to right top, #cd356b, #bd3f32);
+        text-align: center;
+        text-decoration: none;
+        border: 1px solid;
+        padding: 4px 25px;
+        color: white;
+        display: inline-block;
+        font-size: 16px;
+        margin: 10px;
+        border-radius: 25px;
+        width: 15%; 
+    }
+
+    .goHomeButton{
+        
+        background: linear-gradient(to right top, #cd356b, #bd3f32);
+          text-align: center;
+          text-decoration: none;
+          border: 1px solid;
+          padding: 4px 5px;
+          color: white;
+          display: inline-block;
+          font-size: 16px;
+          margin: 10px;
+          border-radius: 25px;
+          width: 30%;
+        }
+    
+    .scrolling-wrapper {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+    .card {
+        display: inline;
+        background: none;
+        border: none;
+    }
+
+    table, thead, tbody, th, td, tr{
+        display: block;
+    
+    }
+
+}
